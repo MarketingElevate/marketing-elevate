@@ -6,18 +6,28 @@
     <title>Datenschutz | MarketingElevateAustria</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <style>
-        body { background-color: #0A192F; color: #FFFFFF; padding: 50px 20px; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        .container { max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 8px; border: 1px solid #C5A059; }
-        h1 { color: #C5A059; font-family: 'Playfair Display', serif; margin-bottom: 30px; }
-        h2 { color: #C5A059; margin-top: 30px; font-size: 1.2rem; }
-        p, a, ul, li { color: #E6E6E6; text-decoration: none; }
-        .back-link { display: inline-block; margin-top: 40px; color: #C5A059; font-weight: bold; }
+        .page-container { max-width: 800px; margin: 80px auto; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--gold); text-align: left; }
+        h1 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 30px; }
+        h2 { color: var(--gold); margin-top: 30px; font-size: 1.2rem; }
+        p, a, ul, li { color: var(--text-light); text-decoration: none; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--gold); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-text">
+                Marketing <span>Elevate</span> Austria
+            </a>
+        </div>
+    </header>
+
+    <main class="page-container">
         <h1>Datenschutzerklärung</h1>
 
         <p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und den Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) im Rahmen der Nutzung dieser Website auf. Gültig ab: 01.01.2024</p>
@@ -70,7 +80,18 @@
         <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um stets den aktuellen rechtlichen Anforderungen zu entsprechen oder Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Datenschutzerklärung.</p>
 
         <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
+            <nav>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | MarketingElevateAustria</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <style>
         body { background-color: #0A192F; color: #fff; text-align: center; padding-top: 50px; font-family: 'Inter', sans-serif; }
-        .form-section { max-width: 600px; margin: 50px auto; padding: 40px; border: 1px solid #C5A059; background: rgba(255,255,255,0.05); border-radius: 10px; display: none; }
+        .form-section { max-width: 600px; margin: 50px auto; padding: 40px; border: 1px solid var(--gold); background: var(--darker-blue); border-radius: 4px; display: none; }
         .form-section:target { display: block; } 
         
-        h2 { color: #C5A059; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
-        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #0d213f; border: 1px solid #333; color: #fff; border-radius: 5px; font-family: inherit; }
-        .submit-btn { background: #C5A059; color: #0A192F; font-weight: bold; cursor: pointer; border: none; padding: 15px; width: 100%; margin-top: 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
-        .submit-btn:hover { background: #fff; }
-        .back-link { display: block; margin-top: 30px; color: #C5A059; text-decoration: none; }
+        h2 { color: var(--gold); margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        input, textarea { width: 100%; padding: 15px; margin: 15px 0; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(197, 160, 89, 0.3); color: var(--white); font-family: inherit; outline: none; border-radius: 2px; }
+        input:focus, textarea:focus { border-color: var(--gold); }
+
+        .submit-btn { background: var(--gold); color: var(--dark-blue); font-weight: bold; cursor: pointer; border: none; padding: 18px; width: 100%; text-transform: uppercase; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 2px; }
+        .submit-btn:hover { background: var(--white); }
+        .back-link { display: block; margin-top: 30px; color: var(--gold); text-decoration: none; font-weight: 500; }
     </style>
 </head>
 <body>
 
-    <a href="index.html"><img src="assets/logo.png" alt="Logo" style="max-height: 80px;"></a>
+    <main>
+        <div id="estate" class="form-section">
+            <h2>Anfrage: EstateElevate</h2>
+            <p>Senden Sie uns Details zu Ihrer Immobilie.</p>
+            <form onsubmit="sendMail('estate'); return false;">
+                <input type="text" id="name_estate" placeholder="Ihr Name" required>
+                <input type="text" id="objekt_estate" placeholder="Objekt (z.B. 3-Zimmer Wohnung)" required>
+                <textarea id="message_estate" rows="5" placeholder="Ihre Nachricht an uns..." required></textarea>
+                <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
+            </form>
+        </div>
 
-    <div id="estate" class="form-section">
-        <h2>Anfrage: EstateElevate</h2>
-        <p>Senden Sie uns Details zu Ihrer Immobilie.</p>
-        <form onsubmit="sendMail('estate'); return false;">
-            <input type="text" id="name_estate" placeholder="Ihr Name" required>
-            <input type="text" id="objekt_estate" placeholder="Objekt (z.B. 3-Zimmer Wohnung)" required>
-            <textarea id="message_estate" rows="5" placeholder="Ihre Nachricht an uns..." required></textarea>
-            <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
-        </form>
-    </div>
+        <div id="car" class="form-section">
+            <h2>Anfrage: CarElevate</h2>
+            <p>Premium-Staging für Ihre Fahrzeuge.</p>
+            <form onsubmit="sendMail('car'); return false;">
+                <input type="text" id="name_car" placeholder="Ihr Name" required>
+                <input type="text" id="modell_car" placeholder="Fahrzeugmodell" required>
+                <textarea id="message_car" rows="5" placeholder="Welches Staging stellen Sie sich vor?" required></textarea>
+                <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
+            </form>
+        </div>
 
-    <div id="car" class="form-section">
-        <h2>Anfrage: CarElevate</h2>
-        <p>Senden Sie uns Details zu Ihrem Fahrzeug.</p>
-        <form onsubmit="sendMail('car'); return false;">
-            <input type="text" id="name_car" placeholder="Ihr Name" required>
-            <input type="text" id="modell_car" placeholder="Fahrzeugmodell" required>
-            <textarea id="message_car" rows="5" placeholder="Welches Staging stellen Sie sich vor?" required></textarea>
-            <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
-        </form>
-    </div>
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </main>
 
-    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
+            <nav>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
 
     <script>
         function sendMail(type) {
@@ -68,7 +84,6 @@
                 body = `Hallo Tobias,\n\nName: ${name}\nFahrzeug: ${modell}\n\nNachricht:\n${msg}`;
             }
 
-            // Erstellt den Mailto-Link und öffnet das Mail-Programm
             window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         }
     </script>
