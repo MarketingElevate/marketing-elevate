@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | MarketingElevateAustria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #0A192F; color: #fff; text-align: center; padding-top: 50px; font-family: 'Inter', sans-serif; }
+        .form-section { max-width: 600px; margin: 50px auto; padding: 40px; border: 1px solid #C5A059; background: rgba(255,255,255,0.05); border-radius: 10px; display: none; }
+        .form-section:target { display: block; } 
+        
+        h2 { color: #C5A059; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #0d213f; border: 1px solid #333; color: #fff; border-radius: 5px; font-family: inherit; }
+        .submit-btn { background: #C5A059; color: #0A192F; font-weight: bold; cursor: pointer; border: none; padding: 15px; width: 100%; margin-top: 10px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn:hover { background: #fff; }
+        .back-link { display: block; margin-top: 30px; color: #C5A059; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" style="max-height: 80px;"></a>
+
+    <div id="estate" class="form-section">
+        <h2>Anfrage: EstateElevate</h2>
+        <p>Senden Sie uns Details zu Ihrer Immobilie.</p>
+        <form onsubmit="sendMail('estate'); return false;">
+            <input type="text" id="name_estate" placeholder="Ihr Name" required>
+            <input type="text" id="objekt_estate" placeholder="Objekt (z.B. 3-Zimmer Wohnung)" required>
+            <textarea id="message_estate" rows="5" placeholder="Ihre Nachricht an uns..." required></textarea>
+            <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
+        </form>
+    </div>
+
+    <div id="car" class="form-section">
+        <h2>Anfrage: CarElevate</h2>
+        <p>Senden Sie uns Details zu Ihrem Fahrzeug.</p>
+        <form onsubmit="sendMail('car'); return false;">
+            <input type="text" id="name_car" placeholder="Ihr Name" required>
+            <input type="text" id="modell_car" placeholder="Fahrzeugmodell" required>
+            <textarea id="message_car" rows="5" placeholder="Welches Staging stellen Sie sich vor?" required></textarea>
+            <button type="submit" class="submit-btn">E-Mail Entwurf erstellen</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+    <script>
+        function sendMail(type) {
+            let email = "";
+            let subject = "";
+            let body = "";
+
+            if (type === 'estate') {
+                email = "estateelevateaustria@outlook.com";
+                const name = document.getElementById('name_estate').value;
+                const objekt = document.getElementById('objekt_estate').value;
+                const msg = document.getElementById('message_estate').value;
+                subject = "Anfrage EstateElevate: " + objekt;
+                body = `Hallo Tobias,\n\nName: ${name}\nObjekt: ${objekt}\n\nNachricht:\n${msg}`;
+            } else {
+                email = "carelevateaustria@outlook.com";
+                const name = document.getElementById('name_car').value;
+                const modell = document.getElementById('modell_car').value;
+                const msg = document.getElementById('message_car').value;
+                subject = "Anfrage CarElevate: " + modell;
+                body = `Hallo Tobias,\n\nName: ${name}\nFahrzeug: ${modell}\n\nNachricht:\n${msg}`;
+            }
+
+            // Erstellt den Mailto-Link und öffnet das Mail-Programm
+            window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        }
+    </script>
+
+</body>
+</html>

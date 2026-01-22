@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich | Tobias Sommer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .about-container { max-width: 900px; margin: 80px auto; padding: 20px; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .about-image { flex: 1; min-width: 300px; }
+        .about-image img { width: 100%; border-radius: 10px; border: 1px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .about-text { flex: 1.5; min-width: 300px; }
+        .about-text h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 2.5rem; margin-bottom: 20px; }
+        .about-text p { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-light); }
+        .social-links { margin-top: 30px; }
+        .back-home { display: inline-block; margin-top: 50px; color: var(--gold); text-decoration: none; font-weight: bold; }
+
+        /* Anpassung für den Footer auf dieser Seite */
+        .about-container + footer {
+            margin-top: 80px; /* Abstand zum Inhalt der Über-mich-Seite */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-text">
+                Marketing <span>Elevate</span> Austria
+            </a>
+        </div>
+    </header>
+
+    <main class="about-container">
+        <div class="about-image">
+            <img src="assets/tobias-sommer.jpg" alt="Tobias Sommer">
+        </div>
+
+        <div class="about-text">
+            <h1>Tobias Sommer</h1>
+            <p><strong>Kopf hinter MarketingElevateAustria.</strong></p>
+            <p>Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
+            <p>Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.</p>
+            <p>Egal ob das leerstehende Loft oder das exklusive Fahrzeug: Ich sorge dafür, dass der erste Klick direkt zum Kauf führt.</p>
+            
+            <a href="mailto:marketingelevateaustria@outlook.com" class="btn">Lass uns quatschen</a>
+            <br>
+            <a href="index.html" class="back-home">← Zurück zur Übersicht</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
+            <nav>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
