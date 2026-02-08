@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Über mich | Tobias Sommer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { colors: { navy: { 900: "#0A0E1A" }, gold: { DEFAULT: "#D4AF37", light: "#F9E4B7" } }, fontFamily: { serif: ["'Bodoni Moda'", "serif"], sans: ["Inter", "sans-serif"] } } } };
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    colors: { 
+                        navy: { 900: "#0A0E1A" }, 
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7" } 
+                    }, 
+                    fontFamily: { 
+                        serif: ["'Bodoni Moda'", "serif"], 
+                        sans: ["Inter", "sans-serif"] 
+                    } 
+                } 
+            } 
+        };
     </script>
     <style type="text/tailwindcss">
-        @layer base { body { @apply bg-navy-900 text-white antialiased font-sans; } }
-        .gold-gradient-text { background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @layer base { 
+            body { @apply bg-navy-900 text-white antialiased font-sans; } 
+        }
+        .gold-gradient-text { 
+            background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
         .editorial-spacing { letter-spacing: 0.2em; }
     </style>
 </head>
@@ -22,22 +44,48 @@
     <main class="max-w-2xl mx-auto px-6 py-12 space-y-12">
         <div class="relative group">
             <div class="absolute -inset-1 bg-gold opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
-            <img src="assets/Tobias-Sommer.jpg" alt="Tobias Sommer" class="relative rounded-sm border border-gold/30 w-full grayscale hover:grayscale-0 transition-all duration-700">
+            <img src="assets/Tobias-Sommer.jpg" 
+                 alt="Tobias Sommer" 
+                 class="relative rounded-sm border border-gold/30 w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
         </div>
 
         <div class="space-y-6">
             <h1 class="font-serif text-5xl italic text-white">Tobias Sommer</h1>
             <p class="editorial-spacing text-gold text-[10px] uppercase font-bold">Founder & Digital Artist</p>
             <div class="w-12 h-[1px] bg-gold/50"></div>
-            <p class="text-gray-300 font-light leading-relaxed">Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
-            <p class="text-gray-300 font-light leading-relaxed">Mit modernster KI-Technik sorge ich dafür, dass der erste Klick direkt zum Erfolg führt.</p>
             
-            <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold text-navy-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
-                Kontakt aufnehmen
-            </a>
+            <p class="text-gray-300 font-light leading-relaxed">
+                <strong>Kopf hinter MarketingElevateAustria.</strong>
+            </p>
+            
+            <p class="text-gray-300 font-light leading-relaxed">
+                Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.
+            </p>
+            
+            <p class="text-gray-300 font-light leading-relaxed">
+                Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.
+            </p>
+
+            <p class="text-gray-300 font-light leading-relaxed">
+                Egal ob das leerstehende Loft oder das exklusive Fahrzeug: Ich sorge dafür, dass der erste Klick direkt zum Erfolg führt.
+            </p>
+            
+            <div class="pt-6">
+                <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold text-navy-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                    Lass uns quatschen
+                </a>
+            </div>
         </div>
-        <a href="index.html" class="block text-center text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold transition-colors pt-8">← Zurück zur Übersicht</a>
+
+        <nav class="pt-12 border-t border-white/5 text-center">
+            <a href="index.html" class="editorial-spacing text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold transition-colors">
+                ← Zurück zur Übersicht
+            </a>
+        </nav>
     </main>
+
+    <footer class="py-12 text-center">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 MarketingElevateAustria</p>
+    </footer>
 </body>
 </html>
-
