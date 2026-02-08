@@ -14,7 +14,7 @@
                 extend: { 
                     colors: { 
                         navy: { 900: "#0A0E1A" }, 
-                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7" } 
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7", dark: "#B8860B" } 
                     }, 
                     fontFamily: { 
                         serif: ["'Bodoni Moda'", "serif"], 
@@ -34,57 +34,53 @@
             -webkit-text-fill-color: transparent; 
         }
         .editorial-spacing { letter-spacing: 0.2em; }
+        .gold-border { border-color: rgba(212, 175, 55, 0.3); }
     </style>
 </head>
 <body>
-    <header class="py-12 text-center">
-        <a href="index.html" class="font-serif text-2xl italic gold-gradient-text">Marketing Elevate Austria</a>
+    <header class="py-16 px-6 flex flex-col items-center text-center">
+        <a href="index.html" class="flex flex-col items-center space-y-1 group">
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-semibold text-gold-light opacity-80">Marketing</span>
+            <div class="h-[1px] w-16 bg-gold/40 my-2 transition-all group-hover:w-24"></div>
+            <span class="font-serif text-5xl md:text-6xl italic gold-gradient-text leading-none tracking-tight">Elevate</span>
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-bold text-gold tracking-[0.5em] mt-2">Austria</span>
+        </a>
     </header>
 
-    <main class="max-w-2xl mx-auto px-6 py-12 space-y-12">
-        <div class="relative group">
-            <div class="absolute -inset-1 bg-gold opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
+    <main class="max-w-xl mx-auto px-6 pb-24 space-y-12 text-center">
+        <div class="relative group max-w-md mx-auto">
+            <div class="absolute -inset-1 bg-gold opacity-10 blur group-hover:opacity-30 transition duration-1000"></div>
             <img src="assets/Tobias-Sommer.jpg" 
                  alt="Tobias Sommer" 
-                 class="relative rounded-sm border border-gold/30 w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                 class="relative rounded-sm border border-gold/20 w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
         </div>
 
         <div class="space-y-6">
             <h1 class="font-serif text-5xl italic text-white">Tobias Sommer</h1>
             <p class="editorial-spacing text-gold text-[10px] uppercase font-bold">Founder & Digital Artist</p>
-            <div class="w-12 h-[1px] bg-gold/50"></div>
+            <div class="w-12 h-[1px] bg-gold/50 mx-auto"></div>
             
-            <p class="text-gray-300 font-light leading-relaxed">
-                <strong>Kopf hinter MarketingElevateAustria.</strong>
-            </p>
+            <div class="space-y-4 text-gray-300 font-light leading-relaxed text-sm">
+                <p><strong>Kopf hinter MarketingElevateAustria.</strong></p>
+                <p>Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
+                <p>Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.</p>
+            </div>
             
-            <p class="text-gray-300 font-light leading-relaxed">
-                Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.
-            </p>
-            
-            <p class="text-gray-300 font-light leading-relaxed">
-                Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.
-            </p>
-
-            <p class="text-gray-300 font-light leading-relaxed">
-                Egal ob das leerstehende Loft oder das exklusive Fahrzeug: Ich sorge dafür, dass der erste Klick direkt zum Erfolg führt.
-            </p>
-            
-            <div class="pt-6">
-                <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold text-navy-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+            <div class="pt-8">
+                <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold hover:bg-gold-dark text-navy-900 px-10 py-4 text-xs font-bold uppercase tracking-widest transition-colors rounded-sm">
                     Lass uns quatschen
                 </a>
             </div>
         </div>
 
-        <nav class="pt-12 border-t border-white/5 text-center">
+        <nav class="pt-16 border-t gold-border">
             <a href="index.html" class="editorial-spacing text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold transition-colors">
                 ← Zurück zur Übersicht
             </a>
         </nav>
     </main>
 
-    <footer class="py-12 text-center">
+    <footer class="py-12 text-center border-t border-white/5 bg-navy-900/50">
         <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 MarketingElevateAustria</p>
     </footer>
 </body>
