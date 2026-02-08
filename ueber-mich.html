@@ -1,83 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Über mich | Tobias Sommer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <style>
-        .about-container { max-width: 1000px; margin: 80px auto; padding: 40px; display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 4px;
-            border: 1px solid var(--gold);
-            box-shadow: 20px 20px 0px var(--gold); 
-        }
-        .about-text { flex: 1.5; min-width: 300px; }
-        .about-text h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 3rem; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-light); }
-        .social-links { margin-top: 30px; }
-        .back-home { display: inline-block; margin-top: 50px; color: var(--gold); text-decoration: none; font-weight: bold; }
-
-        /* Anpassung für den Footer auf dieser Seite */
-        .about-container + footer {
-            margin-top: 80px;
-        }
-
-        @media (max-width: 900px) {
-            .about-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-image { margin-bottom: 20px; }
-            .about-image img { box-shadow: 10px 10px 0px var(--gold); }
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { navy: { 900: "#0A0E1A" }, gold: { DEFAULT: "#D4AF37", light: "#F9E4B7" } }, fontFamily: { serif: ["'Bodoni Moda'", "serif"], sans: ["Inter", "sans-serif"] } } } };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base { body { @apply bg-navy-900 text-white antialiased font-sans; } }
+        .gold-gradient-text { background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .editorial-spacing { letter-spacing: 0.2em; }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">
-                Marketing <span>Elevate</span> Austria
-            </a>
-        </div>
+    <header class="py-12 text-center">
+        <a href="index.html" class="font-serif text-2xl italic gold-gradient-text">Marketing Elevate Austria</a>
     </header>
 
-    <main class="about-container">
-        <div class="about-image">
-            <img src="assets/Tobias-Sommer.jpg" alt="Tobias Sommer">
+    <main class="max-w-2xl mx-auto px-6 py-12 space-y-12">
+        <div class="relative group">
+            <div class="absolute -inset-1 bg-gold opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
+            <img src="assets/tobias-sommer.jpg" alt="Tobias Sommer" class="relative rounded-sm border border-gold/30 w-full grayscale hover:grayscale-0 transition-all duration-700">
         </div>
 
-        <div class="about-text">
-            <h1>Tobias Sommer</h1>
-            <p><strong>Kopf hinter MarketingElevateAustria.</strong></p>
-            <p>Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
-            <p>Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.</p>
-            <p>Egal ob das leerstehende Loft oder das exklusive Fahrzeug: Ich sorge dafür, dass der erste Klick direkt zum Kauf führt.</p>
+        <div class="space-y-6">
+            <h1 class="font-serif text-5xl italic text-white">Tobias Sommer</h1>
+            <p class="editorial-spacing text-gold text-[10px] uppercase font-bold">Founder & Digital Artist</p>
+            <div class="w-12 h-[1px] bg-gold/50"></div>
+            <p class="text-gray-300 font-light leading-relaxed">Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
+            <p class="text-gray-300 font-light leading-relaxed">Mit modernster KI-Technik sorge ich dafür, dass der erste Klick direkt zum Erfolg führt.</p>
             
-            <a href="mailto:marketingelevateaustria@outlook.com" class="btn">Lass uns quatschen</a>
-            <br>
-            <a href="index.html" class="back-home">← Zurück zur Übersicht</a>
+            <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold text-navy-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                Kontakt aufnehmen
+            </a>
         </div>
+        <a href="index.html" class="block text-center text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold transition-colors pt-8">← Zurück zur Übersicht</a>
     </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
-            <nav>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </nav>
-        </div>
-    </footer>
-
 </body>
-
 </html>

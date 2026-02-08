@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz | MarketingElevateAustria</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <style>
-        .page-container { max-width: 800px; margin: 80px auto; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--gold); text-align: left; }
-        h1 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 30px; }
-        h2 { color: var(--gold); margin-top: 30px; font-size: 1.2rem; }
-        p, a, ul, li { color: var(--text-light); text-decoration: none; }
-        .back-link { display: inline-block; margin-top: 40px; color: var(--gold); font-weight: bold; }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Datenschutz | Marketing Elevate Austria</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: "#0A0E1A", 800: "#111827" },
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7", dark: "#B8860B" }
+                    },
+                    fontFamily: {
+                        serif: ["'Bodoni Moda'", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-navy-900 text-white antialiased font-sans; }
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .editorial-spacing { letter-spacing: 0.2em; }
+        .gold-border { border-color: rgba(212, 175, 55, 0.3); }
+        h2 { @apply font-serif text-2xl italic text-gold mt-10 mb-4; }
+        p { @apply text-gray-300 font-light leading-relaxed mb-4 text-sm; }
+        ul { @apply text-gray-300 font-light text-sm mb-4 space-y-2 list-disc pl-5; }
+        strong { @apply text-gold-light font-semibold; }
     </style>
 </head>
-<body>
-
-    <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">
-                Marketing <span>Elevate</span> Austria
-            </a>
-        </div>
+<body class="py-16 px-6">
+    <header class="max-w-3xl mx-auto text-center mb-16">
+        <a href="index.html" class="flex flex-col items-center space-y-0.5 group">
+            <span class="editorial-spacing text-[10px] uppercase font-semibold text-gold-light opacity-80">Marketing</span>
+            <span class="font-serif text-3xl italic gold-gradient-text">Elevate</span>
+            <span class="editorial-spacing text-[10px] uppercase font-bold text-gold tracking-[0.4em]">Austria</span>
+        </a>
     </header>
 
-    <main class="page-container">
-        <h1>Datenschutzerklärung</h1>
+    <main class="max-w-2xl mx-auto bg-navy-800/50 p-8 md:p-12 border border-white/5 rounded-sm shadow-2xl">
+        <h1 class="font-serif text-4xl italic text-white mb-8 border-b gold-border pb-4">Datenschutzerklärung</h1>
+        
+        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-8">Stand: Februar 2026</p>
 
-        <p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und den Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) im Rahmen der Nutzung dieser Website auf. Gültig ab: 01.01.2024</p>
+        <h2>1. Datenschutz auf einen Blick</h2>
+        <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, TKG 2003). In dieser Erklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.</p>
 
-        <h2>Verantwortlicher</h2>
+        <h2>2. Verantwortlicher</h2>
         <p>
-            Tobias Sommer<br>
-            Waldstraße 65<br>
-            8670 Krieglach<br>
-            Österreich<br>
-            E-Mail: <a href="mailto:marketingelevateaustria@outlook.com">marketingelevateaustria@outlook.com</a>
+            <strong>Tobias Sommer</strong><br>
+            Waldstraße 65, 8670 Krieglach, Österreich<br>
+            E-Mail: <a href="mailto:marketingelevateaustria@outlook.com" class="text-gold hover:text-white transition-colors">marketingelevateaustria@outlook.com</a>
         </p>
 
-        <h2>Arten der verarbeiteten Daten</h2>
-        <p>Wir verarbeiten personenbezogene Daten, die Sie uns als Nutzer dieser Website zur Verfügung stellen (z.B. bei Kontaktaufnahme per E-Mail).</p>
-        <p>Darüber hinaus erheben wir bei jedem Zugriff auf diese Website Daten, die Ihr Browser automatisch an unseren Server übermittelt. Dies sind: </p>
+        <h2>3. Datenerfassung auf dieser Website</h2>
+        <p><strong>Hosting (GitHub Pages):</strong> Unsere Website wird auf GitHub Pages gehostet. Beim Zugriff auf unsere Seiten werden Log-Files durch GitHub verarbeitet (IP-Adresse, Datum, Uhrzeit, Browsertyp). Dies ist technisch notwendig, um die Website sicher und stabil bereitzustellen.</p>
+        <p><strong>Kontaktformular / E-Mail:</strong> Wenn Sie uns per E-Mail oder über die Kontakt-Links anfragen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+        <h2>4. Ihre Rechte</h2>
+        <p>Ihnen stehen grundsätzlich folgende Rechte bezüglich Ihrer bei uns gespeicherten Daten zu:</p>
         <ul>
-            <li>IP-Adresse</li>
-            <li>Datum und Uhrzeit der Anfrage</li>
-            <li>Zeitzonendifferenz zur Greenwich Mean Time (GMT)</li>
-            <li>Inhalt der Anforderung (konkrete Seite)</li>
-            <li>Zugriffsstatus / HTTP-Statuscode</li>
-            <li>Jeweils übertragene Datenmenge</li>
-            <li>Website, von der die Anforderung kommt (Referrer-URL)</li>
-            <li>Browser-Typ und -Version</li>
-            <li>Betriebssystem und dessen Oberfläche</li>
-            <li>Sprache und Version der Browsersoftware</li>
+            <li>Auskunft</li>
+            <li>Berichtigung</li>
+            <li>Löschung</li>
+            <li>Einschränkung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Widerruf und Widerspruch</li>
         </ul>
-        <p>Diese Daten sind technisch notwendig, um Ihnen unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten. Sie werden nicht dazu verwendet, Rückschlüsse auf Ihre Person zu ziehen.</p>
+        <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die <strong>Datenschutzbehörde</strong>.</p>
 
-        <h2>Zweck der Datenverarbeitung</h2>
-        <p>Wir verarbeiten Ihre Daten zu folgenden Zwecken:</p>
-        <ul>
-            <li>Zur Bereitstellung und Wartung dieser Website.</li>
-            <li>Zur Beantwortung Ihrer Anfragen (z.B. per E-Mail).</li>
-            <li>Zur Gewährleistung der Sicherheit unserer IT-Systeme.</li>
-        </ul>
+        <h2>5. Cookies & Analyse</h2>
+        <p>Diese Website ist darauf ausgelegt, so datensparsam wie möglich zu sein. Wir setzen aktuell <strong>keine Tracking-Cookies</strong> (wie Google Analytics) ein, die Ihr Nutzerverhalten verfolgen.</p>
 
-        <h2>Rechtsgrundlage</h2>
-        <p>Die Verarbeitung Ihrer Daten erfolgt auf Grundlage unserer berechtigten Interessen gemäß Art 6 Abs 1 lit f DSGVO an der Bereitstellung einer funktionsfähigen und sicheren Website sowie zur Beantwortung Ihrer Anfragen (Art 6 Abs 1 lit b DSGVO).</p>
-
-        <h2>Datenweitergabe an Dritte</h2>
-        <p>Eine Weitergabe Ihrer Daten an Dritte findet grundsätzlich nicht statt, es sei denn, wir sind gesetzlich dazu verpflichtet oder die Weitergabe ist für die Vertragsabwicklung erforderlich.</p>
-        <p>Da wir die Website bei GitHub Pages hosten, werden bei jedem Zugriff Daten von GitHub verarbeitet (siehe GitHub-Datenschutzrichtlinien). Wir haben keinen direkten Einfluss auf diese Datenverarbeitung.</p>
-
-        <h2>Ihre Rechte als betroffene Person</h2>
-        <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde.</p>
-
-        <h2>Änderung der Datenschutzerklärung</h2>
-        <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um stets den aktuellen rechtlichen Anforderungen zu entsprechen oder Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Datenschutzerklärung.</p>
-
-        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+        <div class="pt-12 mt-12 border-t gold-border text-center">
+            <a href="index.html" class="editorial-spacing text-[10px] uppercase text-gray-500 hover:text-gold transition-colors">← Zurück zur Startseite</a>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
-            <nav>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </nav>
-        </div>
+    <footer class="mt-20 text-center">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 MarketingElevateAustria</p>
     </footer>
-
 </body>
 </html>

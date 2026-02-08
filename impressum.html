@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | MarketingElevateAustria</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <style>
-        .page-container { max-width: 800px; margin: 80px auto; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--gold); text-align: left;}
-        h1 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 30px; }
-        h2 { color: var(--gold); margin-top: 30px; font-size: 1.2rem; }
-        p, a, ul, li { color: var(--text-light); text-decoration: none; line-height: 1.8; }
-        .back-link { display: inline-block; margin-top: 40px; color: var(--gold); font-weight: bold; }
-        strong { color: var(--gold); }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Impressum | Marketing Elevate Austria</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: "#0A0E1A", 800: "#111827" },
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7", dark: "#B8860B" }
+                    },
+                    fontFamily: {
+                        serif: ["'Bodoni Moda'", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-navy-900 text-white antialiased font-sans; }
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .editorial-spacing { letter-spacing: 0.2em; }
+        .gold-border { border-color: rgba(212, 175, 55, 0.3); }
+        h2 { @apply font-serif text-2xl italic text-gold mt-10 mb-4; }
+        p { @apply text-gray-300 font-light leading-relaxed mb-4 text-sm; }
+        strong { @apply text-gold-light font-semibold; }
     </style>
 </head>
-<body>
-
-    <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">
-                Marketing <span>Elevate</span> Austria
-            </a>
-        </div>
+<body class="py-16 px-6">
+    <header class="max-w-3xl mx-auto text-center mb-16">
+        <a href="index.html" class="flex flex-col items-center space-y-0.5 group">
+            <span class="editorial-spacing text-[10px] uppercase font-semibold text-gold-light opacity-80">Marketing</span>
+            <span class="font-serif text-3xl italic gold-gradient-text">Elevate</span>
+            <span class="editorial-spacing text-[10px] uppercase font-bold text-gold tracking-[0.4em]">Austria</span>
+        </a>
     </header>
 
-    <main class="page-container">
-        <h1>Impressum</h1>
+    <main class="max-w-2xl mx-auto bg-navy-800/50 p-8 md:p-12 border border-white/5 rounded-sm shadow-2xl">
+        <h1 class="font-serif text-4xl italic text-white mb-8 border-b gold-border pb-4">Impressum</h1>
         
-        <p>Informationen gemäß § 5 E-Commerce-Gesetz, § 14 Unternehmensgesetzbuch und Offenlegungspflicht gemäß § 25 Mediengesetz.</p>
+        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-8">Informationen gemäß § 5 ECG, § 14 UGB und § 25 Mediengesetz</p>
 
         <h2>Medieninhaber & Herausgeber</h2>
         <p>
@@ -42,7 +62,7 @@
             Österreich
         </p>
         <p>
-            E-Mail: <a href="mailto:marketingelevateaustria@outlook.com">marketingelevateaustria@outlook.com</a>
+            E-Mail: <a href="mailto:marketingelevateaustria@outlook.com" class="text-gold hover:text-white transition-colors">marketingelevateaustria@outlook.com</a>
         </p>
 
         <h2>Unternehmensdetails</h2>
@@ -52,8 +72,8 @@
         <p><strong>Steuernummer:</strong> In Beantragung (wird nachgereicht)</p>
         <p><strong>Unternehmensgegenstand:</strong> Erbringung von kreativen Dienstleistungen im Bereich der digitalen Visualisierung, Grafikdesign und Marketingberatung.</p>
 
-        <h2>Besonderer Hinweis zur Gewerbeordnung</h2>
-        <p>Die ausgeübte Tätigkeit fällt gemäß der österreichischen Gewerbeordnung nicht unter die klassischen reglementierten oder freien Gewerbe, die eine Gewerbeberechtigung erfordern. Das Unternehmen ist somit <strong>nicht im Gewerbebuch eingetragen</strong>. Die Anmeldung erfolgt als <strong>Neuer Selbstständiger</strong> direkt beim zuständigen Finanzamt.</p>
+        <h2>Hinweis zur Gewerbeordnung</h2>
+        <p>Die ausgeübte Tätigkeit fällt gemäß der österreichischen Gewerbeordnung nicht unter die klassischen reglementierten oder freien Gewerbe. Das Unternehmen ist somit <strong>nicht im Gewerbebuch eingetragen</strong>. Die Anmeldung erfolgt als <strong>Neuer Selbstständiger</strong> direkt beim zuständigen Finanzamt.</p>
 
         <h2>Aufsichtsbehörde</h2>
         <p>Finanzamt Österreich</p>
@@ -62,21 +82,15 @@
         <p>Aufgrund der Anwendung der <strong>Kleinunternehmerregelung gemäß § 6 Abs. 1 Z 27 UStG</strong> wird auf den Rechnungen keine Umsatzsteuer ausgewiesen und eingehoben.</p>
 
         <h2>EU-Streitschlichtung</h2>
-        <p>Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegung-Plattform der Europäischen Kommission unter <a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a> zu richten.</p>
+        <p>Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegung-Plattform der EU zu richten: <a href="http://ec.europa.eu/odr" target="_blank" class="text-gold hover:text-white transition-colors">http://ec.europa.eu/odr</a></p>
 
-        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+        <div class="pt-12 mt-12 border-t gold-border text-center">
+            <a href="index.html" class="editorial-spacing text-[10px] uppercase text-gray-500 hover:text-gold transition-colors">← Zurück zur Startseite</a>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
-            <nav>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </nav>
-        </div>
+    <footer class="mt-20 text-center">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 MarketingElevateAustria</p>
     </footer>
-
 </body>
 </html>

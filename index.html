@@ -1,57 +1,156 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketingElevateAustria | High-End Digital Staging</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Marketing Elevate Austria | High-End Digital Staging</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: "#0A0E1A", 800: "#111827" },
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7", dark: "#B8860B" }
+                    },
+                    fontFamily: {
+                        serif: ["'Bodoni Moda'", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-navy-900 text-white antialiased; }
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; @apply text-gold; }
+        .editorial-spacing { letter-spacing: 0.2em; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border { border-color: rgba(212, 175, 55, 0.3); }
+        .fade-img { transition: opacity 1.5s ease-in-out; }
+    </style>
 </head>
-<body>
-
-    <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">
-                Marketing <span>Elevate</span> Austria
-            </a>
-        </div>
+<body class="font-sans">
+    <header class="py-16 px-6 flex flex-col items-center text-center">
+        <a href="index.html" class="flex flex-col items-center space-y-1 group">
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-semibold text-gold-light opacity-80">Marketing</span>
+            <div class="h-[1px] w-16 bg-gold/40 my-2 transition-all group-hover:w-24"></div>
+            <span class="font-serif text-5xl md:text-6xl italic gold-gradient-text leading-none tracking-tight">Elevate</span>
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-bold text-gold tracking-[0.5em] mt-2">Austria</span>
+        </a>
     </header>
 
-    <main class="split-container">
-        
-        <section class="brand estate">
-            <div class="content">
-                <span class="badge">Real Estate Staging</span>
-                <h2>EstateElevate</h2>
-                <p>Wir verwandeln leere Räume in fotorealistische Wohnträume. Nutzen Sie die Kraft von KI-gestütztem Virtual Staging für eine schnellere Vermarktung Ihrer Immobilien.</p>
-                <a href="kontakt.html#estate" class="btn">Jetzt anfragen</a>
+    <main class="px-5 py-8 space-y-24 max-w-4xl mx-auto">
+        <section class="text-center max-w-sm mx-auto space-y-6">
+            <h2 class="font-serif text-5xl leading-[1.1] text-white italic">
+                Redefining <span class="gold-gradient-text not-italic">Space</span> Through Digital Artistry.
+            </h2>
+            <div class="w-8 h-[1px] bg-gold mx-auto"></div>
+            <p class="text-gray-400 font-light text-[10px] leading-relaxed editorial-spacing uppercase">Premium Virtual Staging Agency</p>
+        </section>
+
+        <section class="space-y-8 max-w-2xl mx-auto">
+            <div class="relative overflow-hidden rounded-[2rem] bg-navy-800 aspect-video border border-white/5 shadow-2xl">
+                <img id="estate-slide" alt="Estate Staging" class="fade-img w-full h-full object-cover opacity-90" src="assets/estate-bg.jpg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent"></div>
+            </div>
+            <div class="px-2 text-center space-y-4">
+                <span class="editorial-spacing text-[10px] uppercase text-gold font-bold tracking-[0.25em]">01 / Real Estate</span>
+                <h3 class="font-serif text-4xl text-white">EstateElevate</h3>
+                <p class="text-gray-300 font-light leading-relaxed text-sm max-w-md mx-auto">Wir verwandeln leere Räume in fotorealistische Wohnträume. Nutzen Sie die Kraft von KI-gestütztem Virtual Staging für eine schnellere Vermarktung.</p>
+                <a href="kontakt.html#estate" class="inline-block w-full max-w-xs bg-gold hover:bg-gold-dark text-navy-900 py-4 text-sm text-center uppercase font-bold editorial-spacing transition-colors duration-300 rounded-sm">
+                    Jetzt Anfragen
+                </a>
             </div>
         </section>
 
-        <section class="brand car">
-            <div class="content">
-                <span class="badge">Digital Car Staging</span>
-                <h2>CarElevate</h2>
-                <p>Premium-Präsentation für den Fahrzeughandel. Wir setzen Ihre Autos digital in High-End Showrooms in Szene – effizient, innovativ und verkaufsstark.</p>
-                <a href="kontakt.html#car" class="btn">Car-Staging testen</a>
+        <section class="py-16 border-y gold-border space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
+                <div class="text-center space-y-4">
+                    <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                    <h5 class="editorial-spacing text-[11px] uppercase font-bold text-gold-light">Fotorealismus</h5>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Höchste Qualität durch modernste Technologien.</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <span class="material-symbols-outlined text-4xl">schedule</span>
+                    <h5 class="editorial-spacing text-[11px] uppercase font-bold text-gold-light">Schnelligkeit</h5>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Ergebnisse innerhalb von 48 Stunden.</p>
+                </div>
             </div>
         </section>
 
+        <section class="space-y-8 pb-12 max-w-2xl mx-auto">
+            <div class="relative overflow-hidden rounded-[2rem] bg-navy-800 aspect-video border border-white/5 shadow-2xl">
+                <img id="car-slide" alt="Car Staging" class="fade-img w-full h-full object-cover opacity-90" src="assets/car-bg.jpg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent"></div>
+            </div>
+            <div class="px-2 text-center space-y-4">
+                <span class="editorial-spacing text-[10px] uppercase text-gold font-bold tracking-[0.25em]">02 / Automotive</span>
+                <h3 class="font-serif text-4xl text-white">CarElevate</h3>
+                <p class="text-gray-300 font-light leading-relaxed text-sm max-w-md mx-auto">Premium-Präsentation für den Fahrzeughandel. Wir setzen Ihre Autos digital in Szene – effizient und verkaufsstark.</p>
+                <a href="kontakt.html#car" class="inline-block w-full max-w-xs bg-gold hover:bg-gold-dark text-navy-900 py-4 text-sm text-center uppercase font-bold editorial-spacing transition-colors duration-300 rounded-sm">
+                    Car-Staging testen
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 MarketingElevateAustria | Tobias Sommer</p>
-            <nav>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
+    <footer class="px-6 py-20 border-t gold-border bg-navy-900">
+        <div class="text-center space-y-12">
+            <div class="flex flex-col items-center space-y-1">
+                <span class="font-serif text-2xl italic gold-gradient-text">Marketing Elevate Austria</span>
+            </div>
+            <nav class="flex flex-col md:flex-row md:justify-center md:space-x-12 space-y-6 md:space-y-0">
+                <a class="editorial-spacing text-[11px] uppercase text-gray-400 hover:text-gold transition-colors" href="ueber-mich.html">Über mich</a>
+                <a class="editorial-spacing text-[11px] uppercase text-gray-400 hover:text-gold transition-colors" href="impressum.html">Impressum</a>
+                <a class="editorial-spacing text-[11px] uppercase text-gray-400 hover:text-gold transition-colors" href="datenschutz.html">Datenschutz</a>
             </nav>
+            <div class="pt-12 border-t border-white/5">
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest">
+                    © 2026 MarketingElevateAustria<br/>
+                    <span class="text-gold/60">Tobias Sommer</span>
+                </p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Slideshow Logik
+        function createSlideshow(elementId, baseName, count) {
+            let current = 0;
+            const imgElement = document.getElementById(elementId);
+            const images = [`assets/${baseName}.jpg`];
+            
+            // Füge die nummerierten Bilder hinzu (bg1, bg2, bg3, bg4)
+            for(let i = 1; i <= count; i++) {
+                images.push(`assets/${baseName}${i}.jpg`);
+            }
+
+            setInterval(() => {
+                imgElement.style.opacity = 0; // Ausblenden
+                setTimeout(() => {
+                    current = (current + 1) % images.length;
+                    imgElement.src = images[current];
+                    imgElement.style.opacity = 0.9; // Einblenden
+                }, 1500); // Wartet bis Fade-Out fertig ist
+            }, 5000); // Alle 5 Sekunden wechseln
+        }
+
+        // Starte Slideshows für beide Bereiche (Anfangsbild + 3 weitere)
+        window.onload = () => {
+            createSlideshow('estate-slide', 'estate-bg', 3);
+            createSlideshow('car-slide', 'car-bg', 3);
+        };
+    </script>
 </body>
 </html>
