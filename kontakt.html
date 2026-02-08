@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Anfrage | Marketing Elevate Austria</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Über mich | Tobias Sommer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { colors: { navy: { 900: "#0A0E1A" }, gold: { DEFAULT: "#D4AF37" } }, fontFamily: { serif: ["'Bodoni Moda'", "serif"], sans: ["Inter", "sans-serif"] } } } };
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    colors: { 
+                        navy: { 900: "#0A0E1A" }, 
+                        gold: { DEFAULT: "#D4AF37", light: "#F9E4B7", dark: "#B8860B" } 
+                    }, 
+                    fontFamily: { 
+                        serif: ["'Bodoni Moda'", "serif"], 
+                        sans: ["Inter", "sans-serif"] 
+                    } 
+                } 
+            } 
+        };
     </script>
     <style type="text/tailwindcss">
-        @layer base { body { @apply bg-navy-900 text-white antialiased font-sans; } }
-        .gold-gradient-text { background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @layer base { 
+            body { @apply bg-navy-900 text-white antialiased font-sans; } 
+        }
+        .gold-gradient-text { 
+            background: linear-gradient(135deg, #F9E4B7 0%, #D4AF37 50%, #B8860B 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .editorial-spacing { letter-spacing: 0.2em; }
+        .gold-border { border-color: rgba(212, 175, 55, 0.3); }
     </style>
 </head>
-<body class="py-20 px-6">
-    <div class="max-w-xl mx-auto space-y-12">
-        <header class="text-center">
-            <a href="index.html" class="font-serif text-2xl italic gold-gradient-text">Marketing Elevate Austria</a>
-        </header>
+<body>
+    <header class="py-16 px-6 flex flex-col items-center text-center">
+        <a href="index.html" class="flex flex-col items-center space-y-1 group">
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-semibold text-gold-light opacity-80">Marketing</span>
+            <div class="h-[1px] w-16 bg-gold/40 my-2 transition-all group-hover:w-24"></div>
+            <span class="font-serif text-5xl md:text-6xl italic gold-gradient-text leading-none tracking-tight">Elevate</span>
+            <span class="editorial-spacing text-[12px] md:text-[14px] uppercase font-bold text-gold tracking-[0.5em] mt-2">Austria</span>
+        </a>
+    </header>
 
-        <section id="estate-form" class="space-y-8">
-            <h2 class="font-serif text-4xl text-center italic">EstateElevate Anfrage</h2>
-            <form onsubmit="sendMail('estate'); return false;" class="space-y-4">
-                <input type="text" id="name_estate" placeholder="Name" class="w-full bg-white/5 border-white/10 text-white placeholder-gray-500 focus:border-gold focus:ring-0 rounded-sm py-4">
-                <input type="text" id="objekt_estate" placeholder="Objektbeschreibung" class="w-full bg-white/5 border-white/10 text-white focus:border-gold focus:ring-0 rounded-sm py-4">
-                <textarea id="message_estate" rows="4" placeholder="Nachricht" class="w-full bg-white/5 border-white/10 text-white focus:border-gold focus:ring-0 rounded-sm py-4"></textarea>
-                <button type="submit" class="w-full bg-gold text-navy-900 font-bold uppercase py-5 text-sm tracking-widest hover:bg-white transition-colors">E-Mail Entwurf erstellen</button>
-            </form>
-        </section>
+    <main class="max-w-xl mx-auto px-6 pb-24 space-y-12 text-center">
+        <div class="relative group max-w-xs mx-auto">
+            <div class="absolute -inset-1 bg-gold opacity-10 blur group-hover:opacity-30 transition duration-1000"></div>
+            <img src="assets/Tobias-Sommer.jpg" 
+                 alt="Tobias Sommer" 
+                 class="relative rounded-sm border border-gold/20 w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+        </div>
 
-        <a href="index.html" class="block text-center text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold">← Zurück zur Startseite</a>
-    </div>
+        <div class="space-y-6">
+            <h1 class="font-serif text-5xl italic text-white">Tobias Sommer</h1>
+            <p class="editorial-spacing text-gold text-[10px] uppercase font-bold">Founder & Digital Artist</p>
+            <div class="w-12 h-[1px] bg-gold/50 mx-auto"></div>
+            
+            <div class="space-y-4 text-gray-300 font-light leading-relaxed text-sm">
+                <p><strong>Kopf hinter MarketingElevateAustria.</strong></p>
+                <p>Meine Mission ist es, die Art und Weise, wie Immobilien und Fahrzeuge präsentiert werden, zu revolutionieren. In einer digitalen Welt reicht ein einfaches Foto nicht mehr aus – es braucht Visionen.</p>
+                <p>Mit dem Einsatz modernster KI-Technologien helfe ich Maklern und Autohändlern dabei, das volle Potenzial ihrer Objekte sichtbar zu machen. Schnelligkeit, Präzision und ein Auge für Ästhetik sind dabei mein Standard.</p>
+            </div>
+            
+            <div class="pt-8">
+                <a href="mailto:marketingelevateaustria@outlook.com" class="inline-block bg-gold hover:bg-gold-dark text-navy-900 px-10 py-4 text-xs font-bold uppercase tracking-widest transition-colors rounded-sm">
+                    Kontakt aufnehmen
+                </a>
+            </div>
+        </div>
 
-    <script>
-        function sendMail(type) {
-            let email = type === 'estate' ? "estateelevateaustria@outlook.com" : "carelevateaustria@outlook.com";
-            const name = document.getElementById('name_'+type).value;
-            const msg = document.getElementById('message_'+type).value;
-            window.location.href = `mailto:${email}?subject=Anfrage ${type}&body=Name: ${name}%0D%0ANachricht: ${msg}`;
-        }
-    </script>
+        <nav class="pt-16 border-t gold-border">
+            <a href="index.html" class="editorial-spacing text-gray-500 text-[10px] uppercase tracking-widest hover:text-gold transition-colors">
+                ← Zurück zur Übersicht
+            </a>
+        </nav>
+    </main>
+
+    <footer class="py-12 text-center border-t border-white/5 bg-navy-900/50">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 MarketingElevateAustria</p>
+    </footer>
 </body>
 </html>
